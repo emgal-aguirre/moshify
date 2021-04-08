@@ -206,6 +206,7 @@ a {
   white-space: nowrap;
   text-align: center;
   margin: 1rem 0;
+  outline: 0;
 }
 .btn .icon {
   width: 2rem;
@@ -289,7 +290,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
 }
 
 .input-group .btn {
@@ -703,4 +704,23 @@ a {
 .block-domain .input-group {
   box-shadow: 0 0 40px 10px #e6ebeb;
   border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6fr);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
 }
